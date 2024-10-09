@@ -1,8 +1,8 @@
 from asyncio import run
 from typing import Awaitable, Callable
 
-def unawait[T](promise:Awaitable[T]) -> T | None:
-    async def dispach() -> T | None:
+def unawait[T](promise:Awaitable[T]) -> T:
+    async def dispach() -> T:
         return await promise
     return run(dispach())
 
