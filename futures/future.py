@@ -105,7 +105,6 @@ class Future[T:Any]:
         return unawait(self._express(lambda value: bytes(value)))
 
     def __format__(self, format_spec):  # no tested
-        print(f'<{format_spec}<------------------')
         return self._jump('__format__', format_spec)
 
     # 3. **Comparación**:

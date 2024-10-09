@@ -71,6 +71,6 @@ class TestFuture(TestCase):
 
     def test_unpack(self):
         obj = Future(lambda: [0, 1, 2, 3, 4, 5])
-        a, b = obj[3:5]
+        a, b = obj[:2]
         self.assertTrue(isinstance(a, Future))
         self.assertTrue(isinstance(b, Future))
